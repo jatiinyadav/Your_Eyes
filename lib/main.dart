@@ -1,6 +1,7 @@
 // import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:miniproject_youreyes/pages/home.dart';
+// import 'package:miniproject_youreyes/pages/home.dart';
+import 'package:miniproject_youreyes/pages/liquidswipe.dart';
 
 // import 'package:splashscreen/splashscreen.dart';
 
@@ -16,7 +17,8 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.green,
       ),
       // home: SplashScreenPage(),
-      home: HomeScreen(),
+      // home: HomeScreen(),
+      home: LiquidSwipeHome(),
       debugShowCheckedModeBanner: false,
     );
   }
