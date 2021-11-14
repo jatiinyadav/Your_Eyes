@@ -6,23 +6,23 @@ class PageTwo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.amberAccent,
+      color: Colors.blue[300],
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Center(
             child: Text(
-              'Page 2',
+              'Braille Tactile Code',
               style: TextStyle(
-                fontSize: 40,
+                fontSize: 30,
                 fontWeight: FontWeight.bold,
                 decoration: TextDecoration.none,
                 color: Colors.white,
               ),
             ),
           ),
-          SizedBox(height: 400),
+          SizedBox(height: 600),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -54,6 +54,9 @@ class PageTwo extends StatelessWidget {
               )
             ],
           ),
+          Center(
+            child: Image.asset('assets/build_by.png'),
+          )
         ],
       ),
     );

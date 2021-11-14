@@ -8,21 +8,21 @@ class PageThree extends StatelessWidget {
     return Container(
       color: Colors.teal,
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Center(
             child: Text(
-              'Page 3',
+              'More Info',
               style: TextStyle(
-                fontSize: 40,
+                fontSize: 30,
                 fontWeight: FontWeight.bold,
                 decoration: TextDecoration.none,
                 color: Colors.white,
               ),
             ),
           ),
-          SizedBox(height: 400),
+          SizedBox(height: 600),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -54,6 +54,9 @@ class PageThree extends StatelessWidget {
               )
             ],
           ),
+          Center(
+            child: Image.asset('assets/build_by.png'),
+          )
         ],
       ),
     );
