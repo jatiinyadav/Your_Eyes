@@ -42,15 +42,34 @@ class PageTwo extends StatelessWidget {
                   SizedBox(
                     height: 20.0,
                   ),
-                  Text(
-                    'Braille Code is a tactile code enabling blind and visually impaired people to read and write by touch, with various combinations of raised dots representing the alphabet, words, punctuation and numbers.',
-                    style: TextStyle(
-                      fontSize: 19,
-                      fontFamily: 'OpenSans',
-                      decoration: TextDecoration.none,
-                      color: Colors.white,
+                  Text.rich(
+                    TextSpan(
+                      text:
+                          'Braille Code is a tactile code enabling',
+                      style: TextStyle(
+                        fontSize: 19,
+                        fontFamily: 'OpenSans',
+                        decoration: TextDecoration.none,
+                        color: Colors.white,
+                      ),
+                      children: <TextSpan>[
+                        TextSpan(
+                          text: ' blind and visually impaired ',
+                          style: TextStyle(
+                              fontStyle: FontStyle.normal, color: Colors.black),
+                        ),
+                        TextSpan(
+                          text:
+                              'people to read and write by touch, with various combinations of raised dots representing the',
+                        ),
+                        TextSpan(
+                          text: ' alphabet, words, punctuation and numbers. ',
+                          style: TextStyle(
+                              fontStyle: FontStyle.normal, color: Colors.black),
+                        ),
+                      ],
                     ),
-                  ),
+                  )
                 ],
               ),
             ),
@@ -144,7 +163,7 @@ class PageTwo extends StatelessWidget {
               bottom: 10.0,
             ),
             child: Text(
-              'Build with ❤️ by Swapnil & Jatin',
+              'Made with ❤️ by Swapnil & Jatin',
               style: TextStyle(
                 fontSize: 15,
                 fontFamily: 'OpenSans',

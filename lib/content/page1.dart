@@ -28,17 +28,95 @@ class PageOne extends StatelessWidget {
           Container(
             child: Padding(
               padding: EdgeInsets.only(
-                  top: 20.0, bottom: 20.0, left: 20.0, right: 25.0),
+                top: 20.0,
+                bottom: 20.0,
+                left: 20.0,
+                right: 25.0,
+              ),
+              child: Column(
+                children: [
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(8.0),
+                    child: Image.asset('assets/launch_image.png'),
+                  ),
+                  SizedBox(
+                    height: 20.0,
+                  ),
+                  Text.rich(
+                    TextSpan(
+                      text: 'Our Application aims to bridge the gap between them and the visual world by',
+                      style: TextStyle(
+                        fontSize: 19,
+                        fontFamily: 'OpenSans',
+                        decoration: TextDecoration.none,
+                        color: Colors.white,
+                      ),
+                      children: <TextSpan>[
+                        TextSpan(
+                          text: ' Deep Learning and lucid UI ',
+                          style: TextStyle(
+                              fontStyle: FontStyle.normal,
+                              color: Colors.black),
+                        ),
+                        TextSpan(
+                          text:
+                              'accessible on low-ended devices that would allow them to better understand the world around.',
+                        ),
+                      ],
+                    ),
+                  )
+                ],
+              ),
+            ),
+          ),
+          Padding(
+            padding: EdgeInsets.only(
+              top: 10.0,
+              bottom: 20.0,
+              left: 20.0,
+              right: 25.0,
+            ),
+            child: Align(
+              alignment: Alignment.centerLeft,
               child: Text(
-                'Our Application aims to bridge the gap between them and the visual world by leveraging the power of Deep Learning which can be made accessible even on low-ended devices with a lucid User-Interface that would exactly allow them to better understand the world around.',
+                'Features of our Application :',
+                textAlign: TextAlign.left,
                 style: TextStyle(
-                  fontSize: 19,
+                  fontSize: 22,
                   fontFamily: 'OpenSans',
                   decoration: TextDecoration.none,
                   color: Colors.white,
                 ),
               ),
             ),
+          ),
+          Padding(
+            padding: EdgeInsets.only(
+              bottom: 20.0,
+              left: 30.0,
+              right: 25.0,
+            ),
+            child: Align(
+              alignment: Alignment.centerLeft,
+              child: Text(
+                '- Feature 1 \n- Feature 2 \n- Feature 3 \n- Feature 4 \n- Feature 5',
+                textAlign: TextAlign.left,
+                style: TextStyle(
+                  fontSize: 20,
+                  fontFamily: 'OpenSans',
+                  decoration: TextDecoration.none,
+                  color: Colors.white,
+                ),
+              ),
+            ),
+          ),
+          ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              primary: Colors.blueAccent, // background
+              onPrimary: Colors.white, // foreground
+            ),
+            onPressed: () {},
+            child: Text('Start Our Application'),
           ),
           Spacer(),
           Row(
@@ -80,7 +158,7 @@ class PageOne extends StatelessWidget {
               bottom: 10.0,
             ),
             child: Text(
-              'Build with ❤️ by Swapnil & Jatin',
+              'Made with ❤️ by Swapnil & Jatin',
               style: TextStyle(
                 fontSize: 15,
                 fontFamily: 'OpenSans',
