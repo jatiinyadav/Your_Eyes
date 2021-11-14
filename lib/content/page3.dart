@@ -6,24 +6,29 @@ class PageThree extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.teal,
+      color: Colors.purple[200],
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Center(
-            child: Text(
-              'More Info',
-              style: TextStyle(
-                fontSize: 30,
-                fontWeight: FontWeight.bold,
-                decoration: TextDecoration.none,
-                color: Colors.white,
+            child: Padding(
+              padding: EdgeInsets.only(top: 20.0),
+              child: Text(
+                'More Info',
+                style: TextStyle(
+                  fontSize: 30,
+                  fontFamily: 'OpenSans',
+                  decoration: TextDecoration.none,
+                  color: Colors.white,
+                ),
               ),
             ),
           ),
-          SizedBox(height: 600),
+          Spacer(),
           Row(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisSize: MainAxisSize.max,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Container(
@@ -54,9 +59,21 @@ class PageThree extends StatelessWidget {
               )
             ],
           ),
-          Center(
-            child: Image.asset('assets/build_by.png'),
-          )
+          Padding(
+            padding: EdgeInsets.only(
+              top: 10.0,
+              bottom: 10.0,
+            ),
+            child: Text(
+              'Build with ❤️ by Swapnil & Jatin',
+              style: TextStyle(
+                fontSize: 15,
+                fontFamily: 'OpenSans',
+                decoration: TextDecoration.none,
+                color: Colors.white,
+              ),
+            ),
+          ),
         ],
       ),
     );
