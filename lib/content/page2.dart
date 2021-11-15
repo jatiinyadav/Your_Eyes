@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
+import 'package:your_eyes/pages/made_by.dart';
 
 class PageTwo extends StatelessWidget {
-  const PageTwo({Key? key}) : super(key: key);
+  // const PageTwo({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -37,7 +39,7 @@ class PageTwo extends StatelessWidget {
                 children: [
                   ClipRRect(
                     borderRadius: BorderRadius.circular(8.0),
-                    child: Image.asset('assets/Braille.png'),
+                    child: Image.asset('assets/images/braille_code.png'),
                   ),
                   SizedBox(
                     height: 32.0,
@@ -136,7 +138,7 @@ class PageTwo extends StatelessWidget {
               primary: Colors.green, // background
               onPrimary: Colors.white, // foreground
             ),
-            onPressed: () {},
+            onPressed: _launchURL,
             child: Text('Read More on Braille Code'),
           ),
           Spacer(),
@@ -173,23 +175,18 @@ class PageTwo extends StatelessWidget {
               )
             ],
           ),
-          Padding(
-            padding: EdgeInsets.only(
-              top: 10.0,
-              bottom: 10.0,
-            ),
-            child: Text(
-              'Made with ❤️ by Swapnil & Jatin',
-              style: TextStyle(
-                fontSize: 15,
-                fontFamily: 'OpenSans',
-                decoration: TextDecoration.none,
-                color: Colors.white,
-              ),
-            ),
-          ),
+          MadeBy()
         ],
       ),
     );
+  }
+    
+  _launchURL() async {
+    const url = 'https://en.wikipedia.org/wiki/Braille';
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw 'Could not launch $url';
+    }
   }
 }

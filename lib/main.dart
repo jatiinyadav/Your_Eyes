@@ -1,12 +1,19 @@
-// import 'dart:async';
+import 'dart:async';
+
+import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
-// import 'package:miniproject_youreyes/pages/home.dart';
-import 'package:miniproject_youreyes/pages/liquidswipe.dart';
+import 'package:your_eyes/pages/liquidswipe.dart';
 
-// import 'package:splashscreen/splashscreen.dart';
+List<CameraDescription> cameras;
 
-void main() {
-  runApp(MyApp());
+Future<Null> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  try {
+    cameras = await availableCameras();
+  } on CameraException catch (e) {
+    print('Error: $e.code\nError Message: $e.message');
+  }
+  runApp(new MyApp());
 }
 
 class MyApp extends StatelessWidget {

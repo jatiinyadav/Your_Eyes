@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:your_eyes/pages/made_by.dart';
+import 'package:your_eyes/pages/splashscreen.dart';
 
 class PageOne extends StatelessWidget {
-  const PageOne({Key? key}) : super(key: key);
+  // const PageOne({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -37,7 +39,7 @@ class PageOne extends StatelessWidget {
                 children: [
                   ClipRRect(
                     borderRadius: BorderRadius.circular(8.0),
-                    child: Image.asset('assets/launch_image.png'),
+                    child: Image.asset('assets/images/launch_image.png'),
                   ),
                   SizedBox(
                     height: 20.0,
@@ -103,7 +105,8 @@ class PageOne extends StatelessWidget {
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsets.only(top: 5.0, left: 20.0, right: 5.0, bottom: 5.0),
+                    padding: EdgeInsets.only(
+                        top: 5.0, left: 20.0, right: 5.0, bottom: 5.0),
                     child: Align(
                       alignment: Alignment.centerLeft,
                       child: Text(
@@ -122,43 +125,19 @@ class PageOne extends StatelessWidget {
               ),
             ),
           ),
-          // Padding(
-          //   padding: EdgeInsets.only(
-          //     top: 10.0,
-          //     bottom: 20.0,
-          //     left: 20.0,
-          //     right: 25.0,
-          //   ),
-          //   child: Align(
-          //     alignment: Alignment.centerLeft,
-          //     child: Text(
-          //       'Features of our Application :',
-          //       textAlign: TextAlign.left,
-          //       style: TextStyle(
-          //         fontSize: 22,
-          //         fontFamily: 'OpenSans',
-          //         decoration: TextDecoration.none,
-          //         color: Colors.white,
-          //       ),
-          //     ),
-          //   ),
-          // ),
-          // Padding(
-          //   padding: EdgeInsets.only(
-          //     bottom: 20.0,
-          //     left: 30.0,
-          //     right: 25.0,
-          //   ),
-          //   child: Align(
-          //     alignment: Alignment.centerLeft,
-
-          // ),
           ElevatedButton(
             style: ElevatedButton.styleFrom(
               primary: Colors.blueAccent, // background
               onPrimary: Colors.white, // foreground
             ),
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => MySplash(),
+                ),
+              );
+            },
             child: Text('Start Our Application'),
           ),
           Spacer(),
@@ -195,21 +174,7 @@ class PageOne extends StatelessWidget {
               )
             ],
           ),
-          Padding(
-            padding: EdgeInsets.only(
-              top: 10.0,
-              bottom: 10.0,
-            ),
-            child: Text(
-              'Made with ❤️ by Swapnil & Jatin',
-              style: TextStyle(
-                fontSize: 15,
-                fontFamily: 'OpenSans',
-                decoration: TextDecoration.none,
-                color: Colors.white,
-              ),
-            ),
-          ),
+          MadeBy()
         ],
       ),
     );

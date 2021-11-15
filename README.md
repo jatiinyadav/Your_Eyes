@@ -1,4 +1,4 @@
-# miniproject_youreyes
+# your_eyes
 
 A new Flutter project.
 

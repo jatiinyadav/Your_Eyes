@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:liquid_swipe/liquid_swipe.dart';
-import 'package:miniproject_youreyes/content/page1.dart';
-import 'package:miniproject_youreyes/content/page2.dart';
-import 'package:miniproject_youreyes/content/page3.dart';
+import 'package:your_eyes/content/page1.dart';
+import 'package:your_eyes/content/page2.dart';
+import 'package:your_eyes/content/page3.dart';
+
 
 class LiquidSwipeHome extends StatelessWidget {
-  const LiquidSwipeHome({Key? key}) : super(key: key);
+  // const LiquidSwipeHome({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

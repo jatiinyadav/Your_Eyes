@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
+import 'package:your_eyes/pages/made_by.dart';
 
 class PageThree extends StatelessWidget {
-  const PageThree({Key? key}) : super(key: key);
+  // const PageThree({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -37,7 +39,7 @@ class PageThree extends StatelessWidget {
                 children: [
                   ClipRRect(
                     borderRadius: BorderRadius.circular(8.0),
-                    child: Image.asset('assets/visionskills.png'),
+                    child: Image.asset('assets/images/visionskills.png'),
                   ),
                   SizedBox(
                     height: 10.0,
@@ -139,7 +141,7 @@ class PageThree extends StatelessWidget {
               primary: Colors.indigo, // background
               onPrimary: Colors.white, // foreground
             ),
-            onPressed: () {},
+            onPressed: _launchURL,
             child: Text('Learn more about Training'),
           ),
           Spacer(),
@@ -176,23 +178,18 @@ class PageThree extends StatelessWidget {
               )
             ],
           ),
-          Padding(
-            padding: EdgeInsets.only(
-              top: 10.0,
-              bottom: 10.0,
-            ),
-            child: Text(
-              'Made with ❤️ by Swapnil & Jatin',
-              style: TextStyle(
-                fontSize: 15,
-                fontFamily: 'OpenSans',
-                decoration: TextDecoration.none,
-                color: Colors.white,
-              ),
-            ),
-          ),
+          MadeBy(),
         ],
       ),
     );
+  }
+
+  _launchURL() async {
+    const url = 'https://lighthouse-sf.org/programs/skills/';
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw 'Could not launch $url';
+    }
   }
 }
