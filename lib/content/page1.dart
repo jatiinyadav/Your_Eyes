@@ -13,7 +13,7 @@ class PageOne extends StatelessWidget {
         children: [
           Center(
             child: Padding(
-              padding: EdgeInsets.only(top: 20.0),
+              padding: EdgeInsets.only(top: 30.0),
               child: Text(
                 'Your Eyes',
                 style: TextStyle(
@@ -31,7 +31,7 @@ class PageOne extends StatelessWidget {
                 top: 20.0,
                 bottom: 20.0,
                 left: 20.0,
-                right: 25.0,
+                right: 30.0,
               ),
               child: Column(
                 children: [
@@ -44,7 +44,8 @@ class PageOne extends StatelessWidget {
                   ),
                   Text.rich(
                     TextSpan(
-                      text: 'Our Application aims to bridge the gap between them and the visual world by',
+                      text:
+                          'Our Application aims to bridge the gap between them and the visual world by',
                       style: TextStyle(
                         fontSize: 19,
                         fontFamily: 'OpenSans',
@@ -55,8 +56,7 @@ class PageOne extends StatelessWidget {
                         TextSpan(
                           text: ' Deep Learning and lucid UI ',
                           style: TextStyle(
-                              fontStyle: FontStyle.normal,
-                              color: Colors.black),
+                              fontStyle: FontStyle.normal, color: Colors.black),
                         ),
                         TextSpan(
                           text:
@@ -69,47 +69,90 @@ class PageOne extends StatelessWidget {
               ),
             ),
           ),
-          Padding(
-            padding: EdgeInsets.only(
-              top: 10.0,
+          Container(
+            width: 420,
+            height: 210,
+            padding: new EdgeInsets.only(
               bottom: 20.0,
               left: 20.0,
-              right: 25.0,
+              right: 30.0,
             ),
-            child: Align(
-              alignment: Alignment.centerLeft,
-              child: Text(
-                'Features of our Application :',
-                textAlign: TextAlign.left,
-                style: TextStyle(
-                  fontSize: 22,
-                  fontFamily: 'OpenSans',
-                  decoration: TextDecoration.none,
-                  color: Colors.white,
-                ),
+            child: Card(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10.0),
+              ),
+              color: Colors.red[200],
+              elevation: 5,
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Padding(
+                    padding: EdgeInsets.all(10.0),
+                    child: Align(
+                      alignment: Alignment.centerLeft,
+                      child: Text(
+                        'Features of our Application :',
+                        textAlign: TextAlign.left,
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontFamily: 'OpenSans',
+                          decoration: TextDecoration.none,
+                          color: Colors.white,
+                        ),
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(top: 5.0, left: 20.0, right: 5.0, bottom: 5.0),
+                    child: Align(
+                      alignment: Alignment.centerLeft,
+                      child: Text(
+                        '- Feature 1 \n- Feature 2 \n- Feature 3 \n- Feature 4 \n- Feature 5',
+                        textAlign: TextAlign.left,
+                        style: TextStyle(
+                          fontSize: 18,
+                          fontFamily: 'OpenSans',
+                          decoration: TextDecoration.none,
+                          color: Colors.white,
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
               ),
             ),
           ),
-          Padding(
-            padding: EdgeInsets.only(
-              bottom: 20.0,
-              left: 30.0,
-              right: 25.0,
-            ),
-            child: Align(
-              alignment: Alignment.centerLeft,
-              child: Text(
-                '- Feature 1 \n- Feature 2 \n- Feature 3 \n- Feature 4 \n- Feature 5',
-                textAlign: TextAlign.left,
-                style: TextStyle(
-                  fontSize: 20,
-                  fontFamily: 'OpenSans',
-                  decoration: TextDecoration.none,
-                  color: Colors.white,
-                ),
-              ),
-            ),
-          ),
+          // Padding(
+          //   padding: EdgeInsets.only(
+          //     top: 10.0,
+          //     bottom: 20.0,
+          //     left: 20.0,
+          //     right: 25.0,
+          //   ),
+          //   child: Align(
+          //     alignment: Alignment.centerLeft,
+          //     child: Text(
+          //       'Features of our Application :',
+          //       textAlign: TextAlign.left,
+          //       style: TextStyle(
+          //         fontSize: 22,
+          //         fontFamily: 'OpenSans',
+          //         decoration: TextDecoration.none,
+          //         color: Colors.white,
+          //       ),
+          //     ),
+          //   ),
+          // ),
+          // Padding(
+          //   padding: EdgeInsets.only(
+          //     bottom: 20.0,
+          //     left: 30.0,
+          //     right: 25.0,
+          //   ),
+          //   child: Align(
+          //     alignment: Alignment.centerLeft,
+
+          // ),
           ElevatedButton(
             style: ElevatedButton.styleFrom(
               primary: Colors.blueAccent, // background

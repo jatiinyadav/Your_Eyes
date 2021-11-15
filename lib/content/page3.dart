@@ -13,7 +13,7 @@ class PageThree extends StatelessWidget {
         children: [
           Center(
             child: Padding(
-              padding: EdgeInsets.only(top: 20.0),
+              padding: EdgeInsets.only(top: 30.0),
               child: Text(
                 'Vision Skills',
                 style: TextStyle(
@@ -40,7 +40,7 @@ class PageThree extends StatelessWidget {
                     child: Image.asset('assets/visionskills.png'),
                   ),
                   SizedBox(
-                    height: 20.0,
+                    height: 10.0,
                   ),
                   Text.rich(
                     TextSpan(
@@ -76,44 +76,61 @@ class PageThree extends StatelessWidget {
               ),
             ),
           ),
-          Padding(
-            padding: EdgeInsets.only(
-              top: 10.0,
+          Container(
+            width: 420,
+            height: 210,
+            padding: new EdgeInsets.only(
               bottom: 20.0,
               left: 20.0,
-              right: 25.0,
+              right: 30.0,
             ),
-            child: Align(
-              alignment: Alignment.centerLeft,
-              child: Text(
-                'Training Includes: ',
-                textAlign: TextAlign.left,
-                style: TextStyle(
-                  fontSize: 22,
-                  fontFamily: 'OpenSans',
-                  decoration: TextDecoration.none,
-                  color: Colors.white,
-                ),
+            child: Card(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10.0),
               ),
-            ),
-          ),
-          Padding(
-            padding: EdgeInsets.only(
-              bottom: 20.0,
-              left: 30.0,
-              right: 25.0,
-            ),
-            child: Align(
-              alignment: Alignment.centerLeft,
-              child: Text(
-                '- Immersion Training  \n- Changing Vision \n- Changing Life \n- Orientation and Mobility  \n- Essential Living Skills',
-                textAlign: TextAlign.left,
-                style: TextStyle(
-                  fontSize: 20,
-                  fontFamily: 'OpenSans',
-                  decoration: TextDecoration.none,
-                  color: Colors.white,
-                ),
+              color: Colors.grey,
+              elevation: 5,
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Padding(
+                    padding: EdgeInsets.all(10.0),
+                    child: Align(
+                      alignment: Alignment.centerLeft,
+                      child: Text(
+                        'Training Includes:',
+                        textAlign: TextAlign.left,
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontFamily: 'OpenSans',
+                          decoration: TextDecoration.none,
+                          color: Colors.white,
+                        ),
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(
+                      top: 5.0,
+                      left: 20.0,
+                      right: 5.0,
+                      bottom: 5.0,
+                    ),
+                    child: Align(
+                      alignment: Alignment.centerLeft,
+                      child: Text(
+                        '- Immersion Training  \n- Changing Vision \n- Changing Life \n- Orientation and Mobility  \n- Essential Living Skills',
+                        textAlign: TextAlign.left,
+                        style: TextStyle(
+                          fontSize: 18,
+                          fontFamily: 'OpenSans',
+                          decoration: TextDecoration.none,
+                          color: Colors.white,
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
               ),
             ),
           ),
