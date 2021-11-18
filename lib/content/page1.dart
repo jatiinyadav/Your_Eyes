@@ -8,7 +8,7 @@ class PageOne extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.red[300],
+      color: Color.fromRGBO(23, 24, 31, 1),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -30,8 +30,8 @@ class PageOne extends StatelessWidget {
           Container(
             child: Padding(
               padding: EdgeInsets.only(
-                top: 20.0,
-                bottom: 20.0,
+                top: 10.0,
+                bottom: 5.0,
                 left: 20.0,
                 right: 30.0,
               ),
@@ -49,7 +49,7 @@ class PageOne extends StatelessWidget {
                       text:
                           'Our Application aims to bridge the gap between them and the visual world by',
                       style: TextStyle(
-                        fontSize: 19,
+                        fontSize: 18,
                         fontFamily: 'OpenSans',
                         decoration: TextDecoration.none,
                         color: Colors.white,
@@ -58,7 +58,9 @@ class PageOne extends StatelessWidget {
                         TextSpan(
                           text: ' Deep Learning and lucid UI ',
                           style: TextStyle(
-                              fontStyle: FontStyle.normal, color: Colors.black),
+                            fontStyle: FontStyle.normal,
+                            color: Color.fromRGBO(203, 105, 193, 1),
+                          ),
                         ),
                         TextSpan(
                           text:
@@ -71,63 +73,69 @@ class PageOne extends StatelessWidget {
               ),
             ),
           ),
-          Container(
-            width: 420,
-            height: 210,
-            padding: new EdgeInsets.only(
-              bottom: 20.0,
-              left: 20.0,
-              right: 30.0,
-            ),
-            child: Card(
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(10.0),
-              ),
-              color: Colors.red[200],
-              elevation: 5,
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  Padding(
-                    padding: EdgeInsets.all(10.0),
-                    child: Align(
-                      alignment: Alignment.centerLeft,
-                      child: Text(
-                        'Features of our Application :',
-                        textAlign: TextAlign.left,
-                        style: TextStyle(
-                          fontSize: 20,
-                          fontFamily: 'OpenSans',
-                          decoration: TextDecoration.none,
-                          color: Colors.white,
+          Column(
+            children: [
+              Container(
+                padding: new EdgeInsets.only(
+                  bottom: 10.0,
+                  left: 20.0,
+                  right: 30.0,
+                ),
+                child: Card(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10.0),
+                  ),
+                  color: Color.fromRGBO(108, 114, 203, 1),
+                  elevation: 5,
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Padding(
+                        padding: EdgeInsets.all(10.0),
+                        child: Align(
+                          alignment: Alignment.centerLeft,
+                          child: Text(
+                            'Features of our Application :',
+                            textAlign: TextAlign.left,
+                            style: TextStyle(
+                              fontSize: 20,
+                              fontFamily: 'OpenSans',
+                              decoration: TextDecoration.none,
+                              color: Colors.white,
+                            ),
+                          ),
                         ),
                       ),
-                    ),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.only(
-                        top: 5.0, left: 20.0, right: 5.0, bottom: 5.0),
-                    child: Align(
-                      alignment: Alignment.centerLeft,
-                      child: Text(
-                        '- Feature 1 \n- Feature 2 \n- Feature 3 \n- Feature 4 \n- Feature 5',
-                        textAlign: TextAlign.left,
-                        style: TextStyle(
-                          fontSize: 18,
-                          fontFamily: 'OpenSans',
-                          decoration: TextDecoration.none,
-                          color: Colors.white,
+                      Padding(
+                        padding: EdgeInsets.only(
+                          top: 5.0,
+                          left: 20.0,
+                          right: 5.0,
+                          bottom: 10.0,
+                        ),
+                        child: Align(
+                          alignment: Alignment.centerLeft,
+                          child: Text(
+                            '- Feature 1 \n- Feature 2 \n- Feature 3 \n- Feature 4 \n- Feature 5',
+                            textAlign: TextAlign.left,
+                            style: TextStyle(
+                              fontSize: 18,
+                              fontFamily: 'OpenSans',
+                              decoration: TextDecoration.none,
+                              color: Colors.white,
+                            ),
+                          ),
                         ),
                       ),
-                    ),
+                    ],
                   ),
-                ],
+                ),
               ),
-            ),
+            ],
           ),
           ElevatedButton(
             style: ElevatedButton.styleFrom(
-              primary: Colors.blueAccent, // background
+              primary: Color.fromRGBO(203, 105, 193, 1), // background
               onPrimary: Colors.white, // foreground
             ),
             onPressed: () {

@@ -4,7 +4,6 @@ import 'package:your_eyes/content/page1.dart';
 import 'package:your_eyes/content/page2.dart';
 import 'package:your_eyes/content/page3.dart';
 
-
 class LiquidSwipeHome extends StatelessWidget {
   // const LiquidSwipeHome({Key? key}) : super(key: key);
 
@@ -18,7 +17,10 @@ class LiquidSwipeHome extends StatelessWidget {
       ],
       enableSideReveal: true,
       positionSlideIcon: 0.5,
-      slideIconWidget: Icon(Icons.arrow_back_ios),
+      slideIconWidget: Icon(
+        Icons.arrow_back_ios,
+        color: Colors.white,
+      ),
       waveType: WaveType.liquidReveal,
     );
   }

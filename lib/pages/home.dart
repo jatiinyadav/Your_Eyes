@@ -6,8 +6,6 @@ import 'package:telephony/telephony.dart';
 import 'package:flutter/material.dart';
 import 'package:camera/camera.dart';
 import 'package:tflite/tflite.dart';
-import 'package:your_eyes/pages/liquidswipe.dart';
-
 import '../label/labelbox.dart';
 import '../label/camera.dart';
 
@@ -21,6 +19,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+
   List<dynamic> _recognitions;
   int _imageHeight = 0;
   int _imageWidth = 0;
@@ -72,19 +71,14 @@ class _HomePageState extends State<HomePage> {
                   setRecognitions,
                 ),
                 Padding(
-                  padding: EdgeInsets.all(10.0),
+                  padding: EdgeInsets.fromLTRB(10.0, 30.0, 10.0, 10.0),
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
                       primary: Colors.blueAccent, // background
                       onPrimary: Colors.white, // foreground
                     ),
                     onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => LiquidSwipeHome(),
-                        ),
-                      );
+                      Navigator.pop(context);
                     },
                     child: Text('Go Back'),
                   ),

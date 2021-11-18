@@ -8,7 +8,7 @@ class PageThree extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.purple[200],
+      color: Color.fromRGBO(108, 114, 203, 1),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -30,8 +30,8 @@ class PageThree extends StatelessWidget {
           Container(
             child: Padding(
               padding: EdgeInsets.only(
-                top: 20.0,
-                bottom: 20.0,
+                top: 10.0,
+                bottom: 5.0,
                 left: 20.0,
                 right: 30.0,
               ),
@@ -48,7 +48,7 @@ class PageThree extends StatelessWidget {
                     TextSpan(
                       text: 'Blind & Low Vision Skills Training,',
                       style: TextStyle(
-                        fontSize: 19,
+                        fontSize: 18,
                         fontFamily: 'OpenSans',
                         decoration: TextDecoration.none,
                         color: Colors.white,
@@ -57,8 +57,9 @@ class PageThree extends StatelessWidget {
                         TextSpan(
                           text: ' Light House Team ',
                           style: TextStyle(
-                              fontStyle: FontStyle.normal,
-                              color: Colors.indigo),
+                            fontStyle: FontStyle.normal,
+                            color: Color.fromRGBO(23, 24, 31, 1),
+                          ),
                         ),
                         TextSpan(
                           text:
@@ -68,7 +69,7 @@ class PageThree extends StatelessWidget {
                           text: 'Blind & Low Vision Skills Training.',
                           style: TextStyle(
                             fontStyle: FontStyle.normal,
-                            color: Colors.indigo,
+                            color: Color.fromRGBO(23, 24, 31, 1),
                           ),
                         ),
                       ],
@@ -78,67 +79,69 @@ class PageThree extends StatelessWidget {
               ),
             ),
           ),
-          Container(
-            width: 420,
-            height: 210,
-            padding: new EdgeInsets.only(
-              bottom: 20.0,
-              left: 20.0,
-              right: 30.0,
-            ),
-            child: Card(
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(10.0),
-              ),
-              color: Colors.grey,
-              elevation: 5,
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  Padding(
-                    padding: EdgeInsets.all(10.0),
-                    child: Align(
-                      alignment: Alignment.centerLeft,
-                      child: Text(
-                        'Training Includes:',
-                        textAlign: TextAlign.left,
-                        style: TextStyle(
-                          fontSize: 20,
-                          fontFamily: 'OpenSans',
-                          decoration: TextDecoration.none,
-                          color: Colors.white,
+          Column(
+            children: [
+              Container(
+                padding: new EdgeInsets.only(
+                  bottom: 10.0,
+                  left: 20.0,
+                  right: 30.0,
+                ),
+                child: Card(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10.0),
+                  ),
+                  color: Color.fromRGBO(203, 105, 193, 1),
+                  elevation: 5,
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Padding(
+                        padding: EdgeInsets.all(10.0),
+                        child: Align(
+                          alignment: Alignment.centerLeft,
+                          child: Text(
+                            'Training Includes:',
+                            textAlign: TextAlign.left,
+                            style: TextStyle(
+                              fontSize: 20,
+                              fontFamily: 'OpenSans',
+                              decoration: TextDecoration.none,
+                              color: Colors.white,
+                            ),
+                          ),
                         ),
                       ),
-                    ),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.only(
-                      top: 5.0,
-                      left: 20.0,
-                      right: 5.0,
-                      bottom: 5.0,
-                    ),
-                    child: Align(
-                      alignment: Alignment.centerLeft,
-                      child: Text(
-                        '- Immersion Training  \n- Changing Vision \n- Changing Life \n- Orientation and Mobility  \n- Essential Living Skills',
-                        textAlign: TextAlign.left,
-                        style: TextStyle(
-                          fontSize: 18,
-                          fontFamily: 'OpenSans',
-                          decoration: TextDecoration.none,
-                          color: Colors.white,
+                      Padding(
+                        padding: EdgeInsets.only(
+                          top: 5.0,
+                          left: 20.0,
+                          right: 5.0,
+                          bottom: 10.0,
+                        ),
+                        child: Align(
+                          alignment: Alignment.centerLeft,
+                          child: Text(
+                            '- Immersion Training  \n- Changing Vision \n- Changing Life \n- Orientation and Mobility  \n- Essential Living Skills',
+                            textAlign: TextAlign.left,
+                            style: TextStyle(
+                              fontSize: 18,
+                              fontFamily: 'OpenSans',
+                              decoration: TextDecoration.none,
+                              color: Colors.white,
+                            ),
+                          ),
                         ),
                       ),
-                    ),
+                    ],
                   ),
-                ],
+                ),
               ),
-            ),
+            ],
           ),
           ElevatedButton(
             style: ElevatedButton.styleFrom(
-              primary: Colors.indigo, // background
+              primary: Color.fromRGBO(23, 24, 31, 1), // background
               onPrimary: Colors.white, // foreground
             ),
             onPressed: _launchURL,

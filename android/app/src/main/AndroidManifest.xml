@@ -13,7 +13,7 @@
 
    <application
         android:name="io.flutter.app.FlutterApplication"
-        android:label="your_eyes"
+        android:label="Your Eyes"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"
