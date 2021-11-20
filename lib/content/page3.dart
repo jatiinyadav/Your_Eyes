@@ -13,6 +13,7 @@ class PageThree extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
+          SizedBox(height: 30.0),
           Center(
             child: Padding(
               padding: EdgeInsets.only(top: 30.0),
@@ -30,7 +31,7 @@ class PageThree extends StatelessWidget {
           Container(
             child: Padding(
               padding: EdgeInsets.only(
-                top: 10.0,
+                top: 20.0,
                 bottom: 5.0,
                 left: 20.0,
                 right: 30.0,
@@ -42,7 +43,7 @@ class PageThree extends StatelessWidget {
                     child: Image.asset('assets/images/visionskills.png'),
                   ),
                   SizedBox(
-                    height: 10.0,
+                    height: 20.0,
                   ),
                   Text.rich(
                     TextSpan(
@@ -63,7 +64,7 @@ class PageThree extends StatelessWidget {
                         ),
                         TextSpan(
                           text:
-                              'of teachers and specialists (many of whom are low vision/blind themselves) are highly trained in ',
+                              'of teachers and specialists who are eager to help others (many of whom are low vision/blind themselves) are  highly trained in ',
                         ),
                         TextSpan(
                           text: 'Blind & Low Vision Skills Training.',
@@ -79,6 +80,7 @@ class PageThree extends StatelessWidget {
               ),
             ),
           ),
+          Spacer(),
           Column(
             children: [
               Container(
@@ -139,6 +141,7 @@ class PageThree extends StatelessWidget {
               ),
             ],
           ),
+          SizedBox(height: 20.0),
           ElevatedButton(
             style: ElevatedButton.styleFrom(
               primary: Color.fromRGBO(23, 24, 31, 1), // background

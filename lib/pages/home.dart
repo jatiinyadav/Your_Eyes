@@ -71,7 +71,7 @@ class _HomePageState extends State<HomePage> {
                   setRecognitions,
                 ),
                 Padding(
-                  padding: EdgeInsets.fromLTRB(10.0, 30.0, 10.0, 10.0),
+                  padding: EdgeInsets.fromLTRB(10.0, 60.0, 10.0, 10.0),
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
                       primary: Colors.blueAccent, // background

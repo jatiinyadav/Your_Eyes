@@ -13,6 +13,7 @@ class PageTwo extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
+          SizedBox(height: 30.0),
           Center(
             child: Padding(
               padding: EdgeInsets.only(top: 30.0),
@@ -39,10 +40,10 @@ class PageTwo extends StatelessWidget {
                 children: [
                   ClipRRect(
                     borderRadius: BorderRadius.circular(8.0),
-                    child: Image.asset('assets/images/braille_code.png'),
+                    child: Image.asset('assets/images/braille.png'),
                   ),
                   SizedBox(
-                    height: 25.0,
+                    height: 20.0,
                   ),
                   Text.rich(
                     TextSpan(
@@ -79,6 +80,7 @@ class PageTwo extends StatelessWidget {
               ),
             ),
           ),
+          Spacer(),
           Column(
             children: [
               Container(
@@ -139,6 +141,7 @@ class PageTwo extends StatelessWidget {
               ),
             ],
           ),
+          SizedBox(height: 20.0),
           ElevatedButton(
             style: ElevatedButton.styleFrom(
               primary: Color.fromRGBO(108, 114, 203, 1), // background

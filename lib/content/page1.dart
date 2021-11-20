@@ -13,6 +13,7 @@ class PageOne extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
+          SizedBox(height: 30.0),
           Center(
             child: Padding(
               padding: EdgeInsets.only(top: 30.0),
@@ -27,10 +28,11 @@ class PageOne extends StatelessWidget {
               ),
             ),
           ),
+          SizedBox(height: 10.0),
           Container(
             child: Padding(
               padding: EdgeInsets.only(
-                top: 10.0,
+                top: 20.0,
                 bottom: 5.0,
                 left: 20.0,
                 right: 30.0,
@@ -39,7 +41,7 @@ class PageOne extends StatelessWidget {
                 children: [
                   ClipRRect(
                     borderRadius: BorderRadius.circular(8.0),
-                    child: Image.asset('assets/images/launch_image.png'),
+                    child: Image.asset('assets/images/your_eyes.png'),
                   ),
                   SizedBox(
                     height: 20.0,
@@ -47,7 +49,7 @@ class PageOne extends StatelessWidget {
                   Text.rich(
                     TextSpan(
                       text:
-                          'Our Application aims to bridge the gap between them and the visual world by',
+                          'Our Application aims to bridge the gap between normal and',
                       style: TextStyle(
                         fontSize: 18,
                         fontFamily: 'OpenSans',
@@ -56,7 +58,7 @@ class PageOne extends StatelessWidget {
                       ),
                       children: <TextSpan>[
                         TextSpan(
-                          text: ' Deep Learning and lucid UI ',
+                          text: ' Visually Impaired ',
                           style: TextStyle(
                             fontStyle: FontStyle.normal,
                             color: Color.fromRGBO(203, 105, 193, 1),
@@ -64,7 +66,18 @@ class PageOne extends StatelessWidget {
                         ),
                         TextSpan(
                           text:
-                              'accessible on low-ended devices that would allow them to better understand the world around.',
+                              'using',
+                        ),
+                        TextSpan(
+                          text: ' Machine Learning & Artificial Intelligence ',
+                          style: TextStyle(
+                            fontStyle: FontStyle.normal,
+                            color: Color.fromRGBO(203, 105, 193, 1),
+                          ),
+                        ),
+                        TextSpan(
+                          text:
+                              'help them to better understand the world around them for easier life.',
                         ),
                       ],
                     ),
@@ -73,6 +86,7 @@ class PageOne extends StatelessWidget {
               ),
             ),
           ),
+          Spacer(),
           Column(
             children: [
               Container(
@@ -116,7 +130,7 @@ class PageOne extends StatelessWidget {
                         child: Align(
                           alignment: Alignment.centerLeft,
                           child: Text(
-                            '- Feature 1 \n- Feature 2 \n- Feature 3 \n- Feature 4 \n- Feature 5',
+                            '- Helpful for Visually Impaired \n- Peaceful to identify objects \n- Pronounce the visible objects \n- Easy to use  \n- Interactive User Interface',
                             textAlign: TextAlign.left,
                             style: TextStyle(
                               fontSize: 18,
@@ -133,6 +147,7 @@ class PageOne extends StatelessWidget {
               ),
             ],
           ),
+          SizedBox(height: 20.0),
           ElevatedButton(
             style: ElevatedButton.styleFrom(
               primary: Color.fromRGBO(203, 105, 193, 1), // background
