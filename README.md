@@ -71,6 +71,6 @@ samples, guidance on mobile development, and a full API reference.
 
 ## 📃 License
 
-![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)
+<a href="https://jatiinyadav.github.io/"><img src="https://forthebadge.com/images/badges/built-with-love.svg"></a>
 
 This project follows the [MIT License](/LICENSE).
