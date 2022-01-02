@@ -4,7 +4,7 @@
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-Our Application aims to bridge the gap between them and the visual world by Machine Learning lucid User-Interface for easy understanding, accessible on low-ended devices that would allow them to better understand the world around.
+Our Application aims to bridge the gap between them and the visual world by Machine Learning and Artificial Intelligence lucid User-Interface for easy understanding, accessible on low-ended devices that would allow them to better understand the world around.
 
 ## 🛠️ Installation Steps
 Star and Fork the Repo 🌟 and this will keep us motivated.
